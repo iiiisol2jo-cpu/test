@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2566">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html class="light" lang="ko"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="utf-8"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta content="width=device-width, initial-scale=1.0" name="viewport"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Vitality Dashboard - Mobile View&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;amp;family=Inter:wght@400;500;600&amp;amp;display=swap" rel="stylesheet"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;amp;display=swap" rel="stylesheet"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script id="tailwind-config"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tailwind.config = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>darkMode: "class",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>theme: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>extend: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>colors: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-primary-fixed": "#000000",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"inverse-primary": "#618bff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-surface-variant": "#555881",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-tertiary": "#ffefef",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-error-container": "#570008",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-tertiary-fixed": "#39000d",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-secondary-fixed": "#004a22",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"surface-variant": "#d9daff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"inverse-on-surface": "#9799c6",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"tertiary-fixed": "#ff909d",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"surface-container": "#e7e6ff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"error-dim": "#9f0519",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"surface-tint": "#0050d4",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-secondary-container": "#005f2e",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"secondary-dim": "#005c2c",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"outline-variant": "#a7aad7",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"primary-fixed-dim": "#658eff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-surface": "#282b51",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"inverse-surface": "#06092f",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"secondary-fixed-dim": "#5def8f",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"surface-container-highest": "#d9daff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"surface-bright": "#f8f5ff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"secondary": "#006a34",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-tertiary-fixed-variant": "#760726",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-error": "#ffefee",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"error": "#b31b25",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"secondary-container": "#6dfe9c",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-background": "#282b51",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"tertiary": "#a53046",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-secondary": "#cdffd4",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"surface-container-high": "#e0e0ff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-primary-fixed-variant": "#00266e",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"primary-container": "#7b9cff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"background": "#f8f5ff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-primary": "#f1f2ff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"surface-dim": "#cfd1ff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"primary": "#2563EB",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"tertiary-container": "#ff909d",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-primary-container": "#001e5a",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"surface": "#f8f5ff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"outline": "#71749e",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"error-container": "#fb5151",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-tertiary-container": "#67001f",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"secondary-fixed": "#6dfe9c",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"tertiary-fixed-dim": "#ff788b",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"tertiary-dim": "#95233b",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"on-secondary-fixed-variant": "#006a34",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"primary-dim": "#1e40af",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"surface-container-low": "#f1efff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"surface-container-lowest": "#ffffff",</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"primary-fixed": "#7b9cff"</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>fontFamily: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"headline": ["Plus Jakarta Sans"],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"body": ["Inter"],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"label": ["Inter"]</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.material-symbols-outlined {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #e5e7eb; /* 바깥 배경색 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* 스크롤바 숨기기 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hide-scrollbar::-webkit-scrollbar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hide-scrollbar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-ms-overflow-style: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>scrollbar-width: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* 모바일 프레임 내부 스크롤 허용 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.mobile-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 430px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f8f5ff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 50px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-x: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="text-on-surface"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Mobile Wrapper --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="mobile-container flex flex-col"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- TopAppBar (Sticky to the container) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;header class="sticky top-0 w-full z-50 bg-[#f8f5ff]/80 backdrop-blur-xl flex justify-between items-center px-6 py-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;img alt="사용자 프로필" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvlQfPw-xCcCAFccE9JV2avydtXlFe8gxS8wkZ_j-LxEnnHnHAieWE38eoss-MHqjgN4BQ1swUKK58jTYHhbbE0xLO57tdHArUFEaPNXT4QF4xQtWd12xlUkPxHoiZFALwA9COHVGp8YbpVX1X_ztlJcaSV_vbxUKjL1P_3RrLc8Olx56838gNezqjDUFW3xOAPnZAK0OafYWP2jOpiD5LLEAgXG6L_L_n5njyoj_Qx9TCY0f3qOvMd9f8kLyx7Q6bDNKhY5GxrX4"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h1 class="text-2xl font-extrabold tracking-tighter text-primary font-headline"&gt;Vitality&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 duration-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="material-symbols-outlined" data-icon="notifications"&gt;notifications&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;main class="flex-grow pt-4 pb-20 px-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Morning Greeting &amp; Quote Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;section class="mb-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-[2rem] font-headline font-extrabold leading-tight tracking-tight mb-2"&gt;안녕하세요, 민수님.&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="p-6 bg-surface-container-low rounded-lg border-l-4 border-primary"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="italic text-on-surface-variant font-body text-md leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"시작하는 비결은 바로 시작하는 것이다."</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="block mt-2 font-label text-[0.7rem] uppercase tracking-[0.05em] font-semibold text-primary"&gt;— 마크 트웨인&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Today's Lectures --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;section class="mb-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex justify-between items-end mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-lg font-headline font-bold text-on-surface"&gt;오늘의 강의&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="font-label text-[0.7rem] uppercase tracking-[0.05em] font-semibold text-primary"&gt;전체 일정&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex gap-4 overflow-x-auto hide-scrollbar pb-4 -mx-6 px-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Card 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="min-w-[240px] p-5 bg-surface-container-lowest rounded-lg shadow-[0_12px_32px_rgba(40,43,81,0.04)] flex flex-col justify-between border border-outline-variant/20"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="flex justify-between items-start mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label text-[0.6rem] font-bold uppercase tracking-wider"&gt;진행 중&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="material-symbols-outlined text-primary text-xl" data-icon="school"&gt;school&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="text-lg font-headline font-bold mb-1"&gt;고급 미적분학&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-on-surface-variant font-body text-xs mb-4"&gt;A홀 • 피터슨 박사&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center gap-2 text-primary font-semibold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="material-symbols-outlined text-sm" data-icon="schedule"&gt;schedule&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-xs"&gt;09:00 - 10:30 AM&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Card 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="min-w-[240px] p-5 bg-surface-container-low rounded-lg flex flex-col justify-between border-2 border-transparent hover:border-primary/10 transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="flex justify-between items-start mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="px-2 py-1 bg-surface-container-highest text-on-surface-variant rounded-full font-label text-[0.6rem] font-bold uppercase tracking-wider"&gt;다음 강의&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;span class="material-symbols-outlined text-on-surface-variant text-xl" data-icon="biotech"&gt;biotech&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="text-lg font-headline font-bold mb-1"&gt;유기 화학&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-on-surface-variant font-body text-xs mb-4"&gt;402호 • 밀러 교수&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center gap-2 text-on-surface-variant font-semibold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="material-symbols-outlined text-sm" data-icon="schedule"&gt;schedule&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-xs"&gt;11:00 - 12:30 PM&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Bento Grid: Assignments &amp; Progress --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Today's To-do Checklist --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-center mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-lg font-headline font-bold text-on-surface"&gt;오늘의 할 일&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="filter_list"&gt;filter_list&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Task Item 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="p-5 bg-surface-container-lowest rounded-lg shadow-[0_4px_20px_rgba(40,43,81,0.02)] flex items-center justify-between group border border-outline-variant/10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="flex items-center gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center cursor-pointer transition-colors hover:bg-primary/5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="material-symbols-outlined text-primary text-sm hidden" data-icon="check"&gt;check&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;h4 class="text-sm font-bold text-on-surface"&gt;물리 문제집 #4 제출&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-[12px] text-on-surface-variant font-medium"&gt;열역학 및 유체&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="text-right"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-[12px] font-bold text-tertiary uppercase tracking-wider"&gt;4시간&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-[9px] font-label text-on-surface-variant uppercase tracking-widest font-bold"&gt;남음&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Task Item 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="p-5 bg-surface-container-lowest rounded-lg shadow-[0_4px_20px_rgba(40,43,81,0.02)] flex items-center justify-between group border border-outline-variant/10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="flex items-center gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="w-6 h-6 rounded-full border-2 border-outline flex items-center justify-center cursor-pointer hover:border-primary transition-colors"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;h4 class="text-sm font-bold text-on-surface"&gt;자료구조 실습&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-[12px] text-on-surface-variant font-medium"&gt;힙 구현&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="text-right"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-[12px] font-bold text-on-surface-variant uppercase tracking-wider"&gt;2일&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;p class="text-[9px] font-label text-on-surface-variant uppercase tracking-widest font-bold"&gt;남음&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Progress Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;section class="flex flex-col gap-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-lg font-headline font-bold text-on-surface"&gt;진행 상황&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="p-6 bg-surface-container-high rounded-lg flex flex-col justify-between shadow-sm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="text-md font-headline font-bold mb-4"&gt;개인 목표&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="flex justify-between items-center mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="text-xs font-semibold"&gt;독서 챌린지&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="text-xs font-bold text-primary"&gt;72%&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="w-full h-2.5 bg-surface-container-highest rounded-full overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full" style="width: 72%"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="flex justify-between items-center mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="text-xs font-semibold"&gt;코딩 프로젝트&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="text-xs font-bold text-secondary"&gt;45%&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="w-full h-2.5 bg-surface-container-highest rounded-full overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed rounded-full" style="width: 45%"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Daily Stat Card --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="p-6 bg-primary rounded-lg text-on-primary shadow-xl shadow-primary/20 flex items-center gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="material-symbols-outlined" data-icon="bolt"&gt;bolt&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-xl font-bold"&gt;12일째&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-[10px] font-label uppercase tracking-widest opacity-80"&gt;학습 스트릭&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Floating Quick Add Task Button (Positioned relative to the mobile container) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="absolute bottom-28 right-6 w-14 h-14 bg-gradient-to-br from-primary to-primary-dim text-white rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-transform z-40"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="material-symbols-outlined text-3xl" data-icon="add"&gt;add&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- BottomNavBar (Sticky to the bottom of the container) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;nav class="sticky bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-surface/90 backdrop-blur-lg z-50 shadow-[0_-12px_32px_rgba(40,43,81,0.04)] border-t border-outline-variant/10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="flex flex-col items-center justify-center bg-primary text-white rounded-full px-5 py-2 transition-all duration-300 active:scale-90" href="#"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="material-symbols-outlined text-[20px]" data-icon="home_max" style="font-variation-settings: 'FILL' 1;"&gt;home_max&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="font-body text-[9px] font-semibold mt-0.5"&gt;홈&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-2 hover:text-primary transition-colors active:scale-90" href="#"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="material-symbols-outlined text-[20px]" data-icon="calendar_today"&gt;calendar_today&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="font-body text-[9px] font-semibold mt-0.5"&gt;일정&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-2 hover:text-primary transition-colors active:scale-90" href="#"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="material-symbols-outlined text-[20px]" data-icon="assignment_turned_in"&gt;assignment_turned_in&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="font-body text-[9px] font-semibold mt-0.5"&gt;할 일&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-2 hover:text-primary transition-colors active:scale-90" href="#"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="material-symbols-outlined text-[20px]" data-icon="auto_awesome_motion"&gt;auto_awesome_motion&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="font-body text-[9px] font-semibold mt-0.5"&gt;습관&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
