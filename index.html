@@ -38,7 +38,7 @@
     <style>
         /* Mobile View Constraint */
         body { 
-            background-color: #e2e8f0; /* Desktop background */
+            background-color: #e2e8f0; 
             display: flex;
             justify-content: center;
             min-height: 100vh;
@@ -48,7 +48,7 @@
 
         .mobile-container {
             width: 100%;
-            max-width: 430px; /* iPhone 14/15 Pro Max width */
+            max-width: 430px; 
             background-color: #f8faff;
             min-height: 100vh;
             position: relative;
@@ -83,7 +83,6 @@
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
-        /* Input styling */
         input[type="date"], input[type="time"] {
             -webkit-appearance: none;
             min-height: 60px;
@@ -173,12 +172,7 @@
                         <span class="text-xs font-bold text-slate-400 uppercase tracking-widest" id="current-month">April 2024</span>
                     </div>
                     <div class="bg-white rounded-[2rem] p-6 border border-slate-50 shadow-sm space-y-4">
-                        <!-- Dynamic Day List -->
-                        <div id="weekly-schedule-list" class="space-y-4">
-                            <!-- Items will be injected here by JS -->
-                        </div>
-
-                        <!-- Add Schedule Button -->
+                        <div id="weekly-schedule-list" class="space-y-4"></div>
                         <button onclick="navigateTo('add-schedule')" class="w-full mt-4 flex items-center justify-center gap-2 py-4 rounded-2xl bg-blue-50 text-blue-600 font-bold text-sm active:scale-[0.98] transition-all border border-blue-100/50">
                             <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'wght' 700;">add</span>
                             <span>일정 추가하기</span>
@@ -191,7 +185,6 @@
         <!-- 2. ADD SCHEDULE PAGE -->
         <div id="add-schedule-page" class="page bg-slate-50">
             <main class="pb-12 px-6 pt-6">
-                <!-- Header Section -->
                 <div class="mb-8">
                     <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-[10px] font-headline uppercase tracking-widest mb-4">Scheduling</span>
                     <div class="flex items-center gap-3">
@@ -203,13 +196,10 @@
                 </div>
                 
                 <div class="space-y-6">
-                    <!-- Title Input -->
                     <div class="space-y-2">
                         <label class="text-[11px] font-bold uppercase tracking-widest text-slate-400 ml-1">일정 제목</label>
                         <input id="new-schedule-title" class="w-full bg-white border-none rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary text-on-surface placeholder:text-slate-300 shadow-sm transition-all text-lg" placeholder="예: 비즈니스 미팅" type="text"/>
                     </div>
-
-                    <!-- Map Preview -->
                     <div class="relative h-48 w-full rounded-[2rem] overflow-hidden shadow-lg border border-white/20">
                         <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDqKpSgM--2BT_EMsYQpLs_6Q3GJB2tzIRhhkmzNQe4Ivt9Im_W6yqEmPLHAz3kbBjcFpGISuaw2AQonHgTQvXFuPyU2f2YD6Kj_tlz7YngIVps-yXzHODW06CUVmSuNoLayChLIFEAhMMCGAA8z9x9Ml45eyWoZyHsuu4OuAL7LlRGNSj7HJQMfdfayqaQ5opR8QWaZselgQGyBYq4aMw-gYghyTvEZ5LbY2tQmnY2MzxzquUW0--MWWqHuM6z5RkIY8m8QjR4PW8" alt="Seoul Map"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
@@ -218,38 +208,19 @@
                             <span class="text-white font-bold text-xs">위치 설정됨</span>
                         </div>
                     </div>
-
-                    <!-- Date & Time Row -->
                     <div class="grid grid-cols-2 gap-4">
                         <div class="space-y-2">
                             <label class="text-[11px] font-bold uppercase tracking-widest text-slate-400 ml-1">날짜</label>
-                            <div class="relative">
-                                <input id="new-schedule-date" class="w-full bg-white border-none rounded-2xl px-4 py-4 focus:ring-2 focus:ring-primary text-on-surface shadow-sm" type="date"/>
-                            </div>
+                            <input id="new-schedule-date" class="w-full bg-white border-none rounded-2xl px-4 py-4 focus:ring-2 focus:ring-primary text-on-surface shadow-sm" type="date"/>
                         </div>
                         <div class="space-y-2">
                             <label class="text-[11px] font-bold uppercase tracking-widest text-slate-400 ml-1">시간</label>
-                            <div class="relative">
-                                <input id="new-schedule-time" class="w-full bg-white border-none rounded-2xl px-4 py-4 focus:ring-2 focus:ring-primary text-on-surface shadow-sm" type="time"/>
-                            </div>
+                            <input id="new-schedule-time" class="w-full bg-white border-none rounded-2xl px-4 py-4 focus:ring-2 focus:ring-primary text-on-surface shadow-sm" type="time"/>
                         </div>
-                    </div>
-
-                    <!-- AI Insight Mock -->
-                    <div class="bg-emerald-50 border border-emerald-100 rounded-3xl p-6 shadow-sm">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="material-symbols-outlined text-emerald-500 text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
-                            <h3 class="font-bold text-emerald-700 text-xs">AI 인사이트</h3>
-                        </div>
-                        <p class="text-xs text-emerald-600 leading-relaxed font-medium">입력하신 일정의 교통 상황을 분석하여 최적의 경로를 미리 준비하겠습니다.</p>
                     </div>
                 </div>
-
-                <!-- Action Button -->
                 <div class="mt-10">
-                    <button onclick="registerNewSchedule()" class="w-full bg-blue-600 text-white font-headline font-extrabold text-lg py-5 rounded-full shadow-xl shadow-blue-600/30 active:scale-[0.98] transition-all">
-                        일정 등록하기
-                    </button>
+                    <button onclick="registerNewSchedule()" class="w-full bg-blue-600 text-white font-headline font-extrabold text-lg py-5 rounded-full shadow-xl shadow-blue-600/30 active:scale-[0.98] transition-all">일정 등록하기</button>
                 </div>
             </main>
         </div>
@@ -259,12 +230,8 @@
             <main class="pt-8 px-6 space-y-8">
                 <div class="flex flex-col items-center text-center">
                     <span class="bg-blue-50 text-blue-600 text-[10px] font-bold tracking-[0.2em] px-4 py-1.5 rounded-full mb-6 uppercase">Precision Routing</span>
-                    <h1 class="text-3xl font-extrabold leading-tight tracking-tight text-on-surface">
-                        최적의 경로를<br/>
-                        <span class="velocity-gradient-text">AI와 함께</span> 찾으세요
-                    </h1>
+                    <h1 class="text-3xl font-extrabold leading-tight tracking-tight text-on-surface">최적의 경로를<br/><span class="velocity-gradient-text">AI와 함께</span> 찾으세요</h1>
                 </div>
-
                 <div class="bg-white rounded-[2.5rem] p-8 shadow-2xl shadow-blue-500/5 border border-slate-50">
                     <div class="space-y-6 relative">
                         <div class="space-y-2">
@@ -283,11 +250,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <button onclick="performSearch()" class="w-full mt-10 bg-blue-600 text-white py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 shadow-xl shadow-blue-600/20 active:scale-[0.98] transition-all">
-                        <span>경로 찾기</span>
-                        <span class="material-symbols-outlined">alt_route</span>
-                    </button>
+                    <button onclick="performSearch()" class="w-full mt-10 bg-blue-600 text-white py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 shadow-xl shadow-blue-600/20 active:scale-[0.98] transition-all">경로 찾기</button>
                 </div>
             </main>
         </div>
@@ -302,15 +265,14 @@
                     </div>
                     <span class="bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Live AI</span>
                 </div>
-
                 <div class="bg-white p-6 rounded-3xl border border-slate-50 shadow-sm flex items-center justify-between relative">
                     <div class="absolute top-1/2 left-12 right-12 h-px bg-slate-100 -translate-y-1/2"></div>
                     <div class="z-10 bg-white border border-slate-100 p-3 rounded-2xl flex flex-col items-center gap-1 w-24">
                         <span class="material-symbols-outlined text-blue-600">directions_walk</span>
                         <span class="text-[10px] font-bold text-blue-600">도보 5분</span>
                     </div>
-                    <div class="z-10 bg-blue-600 p-4 rounded-2xl shadow-lg shadow-blue-500/30 flex flex-col items-center gap-1 w-28">
-                        <div class="flex items-center gap-1 text-white">
+                    <div class="z-10 bg-blue-600 p-4 rounded-2xl shadow-lg shadow-blue-600/30 flex flex-col items-center gap-1 w-28 text-white">
+                        <div class="flex items-center gap-1 mb-1">
                             <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">directions_bus</span>
                             <span class="font-bold text-xs uppercase">4412</span>
                         </div>
@@ -321,27 +283,21 @@
                         <span class="text-[10px] font-bold text-blue-600">도보 3분</span>
                     </div>
                 </div>
-
-                <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-blue-500/5">
-                    <div class="h-48 bg-slate-200">
-                        <img id="detail-img" src="https://images.unsplash.com/photo-1518998053502-51dd0c61ee07?auto=format&fit=crop&q=80&w=1200" alt="Destination" class="w-full h-full object-cover">
-                    </div>
+                <div class="bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl">
+                    <div class="h-48 bg-slate-200"><img id="detail-img" src="https://images.unsplash.com/photo-1518998053502-51dd0c61ee07?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover"></div>
                     <div class="p-6">
                         <h3 id="detail-dest-name" class="font-extrabold text-2xl text-on-surface">서초구립미술관</h3>
-                        <p id="detail-address" class="text-xs text-slate-400 mt-2">검색된 목적지로의 최적 경로를 안내합니다.</p>
+                        <p class="text-xs text-slate-400 mt-2">서울특별시 서초구 반포대로</p>
                     </div>
                 </div>
-
-                <button onclick="navigateTo('route')" class="w-full bg-blue-600 text-white py-5 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-xl shadow-blue-600/20 active:scale-95 transition-all">
-                    <span>새로운 경로 검색</span>
-                    <span class="material-symbols-outlined">search</span>
-                </button>
+                <button onclick="navigateTo('route')" class="w-full bg-blue-600 text-white py-5 rounded-full font-bold text-lg flex items-center justify-center gap-2 shadow-xl shadow-blue-600/20 active:scale-95 transition-all">새로운 경로 검색</button>
             </main>
         </div>
 
-        <!-- 5. PROFILE PAGE -->
+        <!-- 5. PROFILE PAGE (프로필.png 기반 업데이트) -->
         <div id="profile-page" class="page pb-32">
-            <main class="pt-12 px-6 space-y-8">
+            <main class="pt-12 px-6 space-y-8 overflow-y-auto no-scrollbar">
+                <!-- User Header -->
                 <section class="flex flex-col items-center gap-4">
                     <div class="relative w-32 h-32">
                         <div class="w-full h-full rounded-full bg-slate-800 border-[6px] border-white shadow-2xl overflow-hidden flex items-center justify-center">
@@ -375,34 +331,94 @@
                             <span class="text-[11px] font-bold uppercase opacity-50">Schedule Sync</span>
                             <span class="text-xl font-black text-emerald-500">98%</span>
                         </div>
-                        <div class="h-3 w-full bg-slate-50 rounded-full overflow-hidden">
+                        <div class="h-3 w-full bg-slate-100 rounded-full overflow-hidden">
                             <div class="h-full schedule-progress rounded-full" style="width: 98%;"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 pt-2 leading-relaxed text-center font-medium">
+                            당신의 현재 보행 속도는 오늘의 일정을 완벽하게 소화하기 위해 최적화되어 있습니다.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- AI Analysis Card (from 프로필.png) -->
+                <section class="bg-blue-600 rounded-[2rem] p-8 text-white space-y-6 shadow-2xl shadow-blue-600/30 relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
+                    <div class="flex items-center gap-2 relative z-10">
+                        <span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                        <h3 class="text-[10px] font-bold uppercase tracking-[0.2em]">AI 분석</h3>
+                    </div>
+                    <p class="text-2xl font-bold leading-tight relative z-10">
+                        오전 9시 미팅을 위한 최적 출발 시간은 <span class="text-emerald-400 underline decoration-2 underline-offset-8">8시 15분</span>입니다.
+                    </p>
+                    <div class="flex gap-4 relative z-10">
+                        <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl flex-1 text-center border border-white/10">
+                            <p class="text-[9px] font-bold uppercase opacity-60 mb-1">Traffic Reduct.</p>
+                            <p class="text-lg font-bold">-12min</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl flex-1 text-center border border-white/10">
+                            <p class="text-[9px] font-bold uppercase opacity-60 mb-1">Efficiency</p>
+                            <p class="text-xl font-bold">High</p>
                         </div>
                     </div>
                 </section>
 
-                <button class="w-full bg-slate-100 text-error font-extrabold py-5 rounded-[2rem] active:scale-95 transition-all">로그아웃</button>
+                <!-- Settings & Management (from 프로필.png) -->
+                <div class="space-y-4">
+                    <p class="text-[10px] font-bold text-slate-400 px-3 uppercase tracking-widest">설정 및 관리</p>
+                    <div class="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm">
+                        <button class="w-full flex items-center justify-between p-5 hover:bg-slate-50 transition-colors">
+                            <div class="flex items-center gap-4 text-on-surface">
+                                <span class="material-symbols-outlined text-slate-400">favorite</span>
+                                <span class="text-sm font-semibold">선호 도착 취향 관리</span>
+                            </div>
+                            <span class="material-symbols-outlined text-slate-300">chevron_right</span>
+                        </button>
+                        <button class="w-full flex items-center justify-between p-5 border-t border-slate-50 hover:bg-slate-50 transition-colors">
+                            <div class="flex items-center gap-4 text-on-surface">
+                                <span class="material-symbols-outlined text-slate-400">sync</span>
+                                <span class="text-sm font-semibold">일정 자동 연동</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="bg-emerald-50 text-emerald-500 text-[10px] font-extrabold px-2 py-0.5 rounded-lg">ACTIVE</span>
+                                <span class="material-symbols-outlined text-slate-300">chevron_right</span>
+                            </div>
+                        </button>
+                        <button class="w-full flex items-center justify-between p-5 border-t border-slate-50 hover:bg-slate-50 transition-colors">
+                            <div class="flex items-center gap-4 text-on-surface">
+                                <span class="material-symbols-outlined text-slate-400">notifications</span>
+                                <span class="text-sm font-semibold">알림 설정</span>
+                            </div>
+                            <span class="material-symbols-outlined text-slate-300">chevron_right</span>
+                        </button>
+                        <button class="w-full flex items-center justify-between p-5 border-t border-slate-50 hover:bg-slate-50 transition-colors">
+                            <div class="flex items-center gap-4 text-on-surface">
+                                <span class="material-symbols-outlined text-slate-400">description</span>
+                                <span class="text-sm font-semibold">서비스 약관 및 정책</span>
+                            </div>
+                            <span class="material-symbols-outlined text-slate-300">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="w-full bg-slate-50 text-error font-extrabold py-5 rounded-[2rem] active:scale-95 transition-all mb-4">로그아웃</button>
             </main>
         </div>
 
         <!-- BOTTOM TAB BAR -->
         <nav id="bottom-nav" class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] flex justify-center pb-8 pt-3 glass z-50 border-t border-white/50">
             <div class="w-full px-6 flex justify-around items-center">
-                <!-- Home -->
                 <button onclick="navigateTo('home')" class="nav-item flex flex-col items-center gap-1 active" id="nav-home">
                     <div class="nav-pill-bg flex items-center justify-center transition-all duration-300">
                         <span class="material-symbols-outlined nav-icon">home_max</span>
                     </div>
                     <span class="text-[11px] nav-label">홈</span>
                 </button>
-                <!-- Route -->
                 <button onclick="navigateTo('route')" class="nav-item flex flex-col items-center gap-1" id="nav-route">
                     <div class="nav-pill-bg flex items-center justify-center transition-all duration-300">
                         <span class="material-symbols-outlined nav-icon">alt_route</span>
                     </div>
                     <span class="text-[11px] nav-label">경로</span>
                 </button>
-                <!-- Profile -->
                 <button onclick="navigateTo('profile')" class="nav-item flex flex-col items-center gap-1" id="nav-profile">
                     <div class="nav-pill-bg flex items-center justify-center transition-all duration-300">
                         <span class="material-symbols-outlined nav-icon">person</span>
@@ -424,13 +440,12 @@
         function renderWeeklySchedules() {
             const listEl = document.getElementById('weekly-schedule-list');
             listEl.innerHTML = '';
-
             weeklySchedules.forEach(schedule => {
                 const item = document.createElement('div');
                 item.className = "flex items-center justify-between py-3 border-b border-slate-50 last:border-none group cursor-pointer active:bg-slate-50 transition-colors rounded-xl px-2";
                 item.innerHTML = `
                     <div class="flex items-center gap-4">
-                        <div class="flex flex-col items-center justify-center w-12 h-12 rounded-2xl ${schedule.day === 'Mon' ? 'bg-blue-50 text-blue-600' : 'bg-slate-50 text-slate-400'}">
+                        <div class="flex flex-col items-center justify-center w-12 h-12 rounded-2xl ${['Mon', 'Wed'].includes(schedule.day) ? 'bg-blue-50 text-blue-600' : 'bg-slate-50 text-slate-400'}">
                             <span class="text-[10px] font-bold uppercase">${schedule.day}</span>
                             <span class="font-bold">${schedule.date}</span>
                         </div>
@@ -449,42 +464,20 @@
             const titleInput = document.getElementById('new-schedule-title');
             const dateInput = document.getElementById('new-schedule-date');
             const timeInput = document.getElementById('new-schedule-time');
-
-            if (!titleInput.value || !dateInput.value) {
-                alert('일정 제목과 날짜를 입력해 주세요.');
-                return;
-            }
-
+            if (!titleInput.value || !dateInput.value) { alert('일정 제목과 날짜를 입력해 주세요.'); return; }
             const dateObj = new Date(dateInput.value);
             const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
             const dayName = days[dateObj.getDay()];
             const dayDate = dateObj.getDate();
-
-            // Simple time format (converting 24h to 12h style for consistency)
             let timeVal = timeInput.value || "12:00";
             const [h, m] = timeVal.split(':');
             const hNum = parseInt(h);
             const period = hNum >= 12 ? '오후' : '오전';
             const hDisplay = hNum % 12 || 12;
             const formattedTime = `${period} ${hDisplay}:${m}`;
-
-            const newSchedule = {
-                id: Date.now(),
-                title: titleInput.value,
-                time: formattedTime,
-                location: '위치 설정됨',
-                day: dayName,
-                date: dayDate.toString()
-            };
-
+            const newSchedule = { id: Date.now(), title: titleInput.value, time: formattedTime, location: '위치 설정됨', day: dayName, date: dayDate.toString() };
             weeklySchedules.push(newSchedule);
-            
-            // Clear inputs
-            titleInput.value = '';
-            dateInput.value = '';
-            timeInput.value = '';
-
-            // Update UI and Navigate
+            titleInput.value = ''; dateInput.value = ''; timeInput.value = '';
             renderWeeklySchedules();
             navigateTo('home');
         }
@@ -492,14 +485,10 @@
         // --- Navigation Logic ---
         function navigateTo(pageId) {
             document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-            
             const target = document.getElementById(pageId + '-page');
             if(target) target.classList.add('active');
-            
             const bottomNav = document.getElementById('bottom-nav');
             const globalHeader = document.getElementById('global-header');
-            
-            // Sub-pages hide global navigation
             if (pageId === 'add-schedule' || pageId === 'route-detail') {
                 bottomNav.style.display = 'none';
                 globalHeader.style.display = 'none';
@@ -507,15 +496,11 @@
                 bottomNav.style.display = 'flex';
                 globalHeader.style.display = 'block';
             }
-            
             window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // Update Nav item state
             document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
             let navTarget = pageId;
             if(pageId === 'route-detail') navTarget = 'route';
             if(pageId === 'add-schedule') navTarget = 'home';
-            
             const activeNav = document.getElementById('nav-' + navTarget);
             if(activeNav) activeNav.classList.add('active');
         }
@@ -525,21 +510,11 @@
             const input = document.getElementById('destination-input');
             const destName = input.value.trim() || "서초구립미술관";
             document.getElementById('detail-dest-name').textContent = destName;
-            
-            const imgEl = document.getElementById('detail-img');
-            if(destName.includes("학교") || destName.includes("대학")) {
-                imgEl.src = "https://images.unsplash.com/photo-1541339907198-e08756ebafe1?auto=format&fit=crop&q=80&w=1200";
-            } else {
-                imgEl.src = "https://images.unsplash.com/photo-1518998053502-51dd0c61ee07?auto=format&fit=crop&q=80&w=1200";
-            }
             navigateTo('route-detail');
         }
 
-        // Initial Load
         window.onload = () => {
             renderWeeklySchedules();
-            
-            // Keyboard listener for search
             document.getElementById('destination-input').addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') performSearch();
             });
